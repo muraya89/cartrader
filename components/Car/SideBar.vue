@@ -1,5 +1,6 @@
 <script setup>
 const route = useRoute()
+const router = useRouter()
 const { makes } = useCars()
 const modal = ref({
   location: false,
@@ -49,7 +50,7 @@ const onChangePrice = () => {
   if(priceRange.value.min && priceRange.value.max) {
     if(priceRange.value.min > priceRange.value.max)return
   }
-  route.push({
+  router.push({
     query: {
       minPrice: priceRange.value.min,
       maxPrice: priceRange.value.max
