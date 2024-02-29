@@ -2,7 +2,7 @@
 const image = useState('image', () => {
     return {
         preview: null,
-        immage: null
+        image: null
     }
 })
 const emits = defineEmits(['changeInput'])
