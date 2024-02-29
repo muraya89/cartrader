@@ -1,7 +1,6 @@
 <script setup>
 definePageMeta({
-    layout: 'custom',
-    middlewares: ['auth']
+    layout: 'custom'
 })
 const { listings } = useCars()
 </script>
