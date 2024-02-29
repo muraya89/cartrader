@@ -1,6 +1,15 @@
 <script setup>
 definePageMeta({
-    layout: 'custom'
+    layout: 'custom',
+    middleware: ['auth'
+    //     function (to, from) {
+    //         const user = useSupabaseUser()
+    //         if (user.value) {
+    //             return ;
+    //         }
+    //         return navigateTo('/login')
+    //     }
+    ]
 })
 
 const { makes } = useCars()
