@@ -16,6 +16,8 @@ const handleFavorite = (id) => {
 
 <template>
     <div class="w-full">
-        <CarCard v-for="car in cars" :key="car.id" :car="car" @favorite="handleFavorite" :favored="favorites[car.id]"/>
+        <ClientOnly >
+            <CarCard v-for="car in cars" :key="car.id" :car="car" @favorite="handleFavorite" :favored="favorites[car.id]"/>
+        </ClientOnly>
     </div>
 </template>
